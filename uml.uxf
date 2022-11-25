@@ -15,7 +15,7 @@
 -nombre: str
 -descripcion: text
 -cantidadEntradas: int
--artistasParticipantes: str
+-artistasParticipantes: text
 -inicioStream: datetime
 -finStream: datetime
 -fechaConfirmacion: datetime
