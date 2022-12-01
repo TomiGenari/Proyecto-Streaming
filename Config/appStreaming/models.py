@@ -45,6 +45,9 @@ class Evento(models.Model):
     fechaRegistro = models.DateTimeField()
     link = models.CharField(max_length=30)
     urlImg = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.nombre
     
     idProductor = models.ForeignKey('Productor', on_delete=models.CASCADE)
     idTipoEvento = models.ForeignKey('TipoEvento', on_delete=models.CASCADE)
