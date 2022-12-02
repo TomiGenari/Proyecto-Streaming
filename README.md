@@ -2,19 +2,16 @@
 
 ## -- Guia de instalacion --
 
-### Crear el usuario mysql de la siguiente forma:
+- Ejecutar el siguiente comando dentro de /Proyecto-Streaming
 
-- Abrir el terminal y escribir:
--   ```
-    sudo service mysql start
-    ```
-- Ingresar con su usuario (mysql -u suUsuario -p) y luego escribir
--   ```
-    CREATE USER 'grupo10'@'localhost' IDENTIFIED BY 'pepe1234';
-    ```
--   ```
-    GRANT ALL PRIVILEGES ON * . * TO 'grupo10'@'localhost';
-    ```
--   ```
-    FLUSH PRIVILEGES;
-    ```
+       pipenv shell
+- Una vez dentro del entorno virtual instalar los requerimientos y dirigirse a la carpeta /Config
+
+        pip install -r requirements.txt
+        cd Config
+- Luego para inicializar el servidor ejecutar lo siguiente
+
+        /manage.py runserver
+- Abra el navegador web de su preferencia e ingrese a la siguiente dirección
+
+        http://127.0.0.1:8000/
