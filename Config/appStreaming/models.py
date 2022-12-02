@@ -10,6 +10,9 @@ class Productor(models.Model):
     mail = models.CharField(max_length=30)
     password = models.CharField(max_length=30)
 
+    USERNAME_FIELD='email'
+    REQUIRED_FIELDS=[]
+
 class PaisDestino(models.Model):
     nombre = models.CharField(max_length=30)
     moneda = models.CharField(max_length=30)
