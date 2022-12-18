@@ -16,26 +16,38 @@ class Productor(models.Model):
 class PaisDestino(models.Model):
     nombre = models.CharField(max_length=30)
     moneda = models.CharField(max_length=30)
+def __str__(self):
+        return self.nombre    
 
 class Estado(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
+def __str__(self):
+        return self.nombre    
 
 class PlataformaStream(models.Model):
-    nombre = models.CharField(max_length=30)
+    Nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
+def __str__(self):
+        return self.Nombre    
 
 class CategoriaEvento(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
+def __str__(self):
+        return self.nombre    
 
 class TipoEvento(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
+def __str__(self):
+        return self.nombre    
 
 class Estado(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
+def __str__(self):
+        return self.nombre    
 
 class Evento(models.Model):
     nombre = models.CharField(max_length=30)
@@ -48,7 +60,6 @@ class Evento(models.Model):
     fechaRegistro = models.DateTimeField()
     link = models.CharField(max_length=30)
     urlImg = models.CharField(max_length=30)
-
     def __str__(self):
         return self.nombre
     
