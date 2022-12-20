@@ -10,43 +10,46 @@ class Productor(models.Model):
     mail = models.CharField(max_length=30)
     password = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.nombre 
+
     USERNAME_FIELD='email'
     REQUIRED_FIELDS=[]
 
 class PaisDestino(models.Model):
     nombre = models.CharField(max_length=30)
     moneda = models.CharField(max_length=30)
-def __str__(self):
+    def __str__(self):
         return self.nombre    
 
 class Estado(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
-def __str__(self):
+    def __str__(self):
         return self.nombre    
 
 class PlataformaStream(models.Model):
-    Nombre = models.CharField(max_length=30)
+    nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
-def __str__(self):
-        return self.Nombre    
+    def __str__(self):
+        return self.nombre    
 
 class CategoriaEvento(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
-def __str__(self):
+    def __str__(self):
         return self.nombre    
 
 class TipoEvento(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
-def __str__(self):
+    def __str__(self):
         return self.nombre    
 
 class Estado(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=30)
-def __str__(self):
+    def __str__(self):
         return self.nombre    
 
 class Evento(models.Model):
