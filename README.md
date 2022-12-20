@@ -1,6 +1,12 @@
-# Proyecto-Streaming
+# 📺📽 Proyecto-Streaming 📽📺
 
-## -- Guia de instalacion --
+## 📚 -- Caso de estudio -- 📚
+
+- Una empresa que se dedica a la organización de eventos, en el contexto de la pandemia, se ha propuesto brindar servicios de eventos vía streaming de diferentes tipos, en 8 países de la región.  
+
+#  
+
+## 🤓 -- Guia de instalacion -- 🤓
 
 - Ejecutar el siguiente comando dentro de /Proyecto-Streaming
 
