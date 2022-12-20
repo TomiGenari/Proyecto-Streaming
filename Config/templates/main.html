@@ -2,15 +2,130 @@
 
 {% extends "base.html" %}
 
+
 {% block div_content %}
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+<style>
 
+
+h1, input::-webkit-input-placeholder, button {
+  font-family: 'roboto', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+h1 {
+  height: 100px;
+  width: 100%;
+  font-size: 18px;
+  background: darken(color, 4%);
+  color: white;
+  line-height: 150%;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+textarea{
+  width: 100%;
+  height: 60px;
+  display: block;
+  border: round;
+  padding: 10px 0;
+  border-bottom: solid 1px color;
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, color 4%);
   
+  background-repeat: no-repeat;
+  color: darken(color, 20%);
+}
+
+form {
+  box-sizing: border-box;
+  width: 260px;
+  margin: 100px auto 0;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+  padding-bottom: 40px;
+  border-radius: 3px;
+ 
+}
+
+input {
+  margin: 40px 25px;
+  width: 200px;
+  display: block;
+  border: round;
+  padding: 10px 0;
+  border-bottom: solid 1px color;
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, color 4%);
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  color: darken(color, 20%);
+ 
+  }
+
+select{
+  border: none;
+  background: color;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 200px;
+  margin-left: 25px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+}
+button {
+  border: none;
+  background: color;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 200px;
+  color: white;
+  margin-left: 25px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+ 
+}
+h2{
+  font-family: 'Roboto';
+  display: block;
+  border: round;
+  padding: 10px 0;
+  border-bottom: solid 1px color;
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  background: linear-gradient(to bottom, rgba(105, 51, 51, 0) 96%, color 4%);
+  background-position: -200px 0;
+  
+  background-repeat: no-repeat;
+  color: darken(color, 20%);
+}
+.follow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50px;
+  background: #03A9F4;
+  display: inline-block;
+  margin: 50px calc(50% - 21px);
+  white-space: nowrap;
+  padding: 13px;
+  box-sizing: border-box;
+  color: white;
+  transition: all 0.2s ease;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+ 
+}
+</style>
+    <center><h2>Por favor ingrese los datos solicitados</h2></center>
   
       <form action="" method="post">
           
         {% csrf_token %}
-        {{formito.as_table}}
+        {{formito}}
       
 
         <div>

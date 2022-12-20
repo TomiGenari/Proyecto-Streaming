@@ -13,7 +13,6 @@ def inicio(request):
         
         if formito.is_valid():
             
-            #PROCESAR LA INFORMACION
             
             formito.save()  
            
