@@ -17,7 +17,7 @@
         cd Config
 - Luego para inicializar el servidor ejecutar lo siguiente
 
-        /manage.py runserver
+        python3 /manage.py runserver
 - Abra el navegador web de su preferencia e ingrese a la siguiente dirección
 
         http://127.0.0.1:8000/
