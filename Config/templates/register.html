@@ -53,7 +53,6 @@
     padding: 6px;
     width: 200px;
     color: white;
-    margin-left: 25px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
 
   }
@@ -68,10 +67,14 @@
 
   }
 </style>
-
+<script>
+  function myFunction() {
+    document.write("Registrado con exito");
+  }
+  </script>
 <center>
   <h2>Registro</h2>
-</center>
+
 
 <form action="" method="post">
 
@@ -80,13 +83,13 @@
 
 
   <div>
-    <button type="submit" value="submit" class="btn btn-primary">Ingresar</button>
+    <button type="submit" value="submit" class="btn btn-primary"  onclick= myFunction()>Ingresar</button>
 
 
   </div>
 
 </form>
 
-
+</center>
 
 {% endblock %}
