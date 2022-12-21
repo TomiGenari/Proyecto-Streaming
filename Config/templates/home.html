@@ -1,8 +1,7 @@
-{% extends 'base.html' %}
-
-{% block title %}Home{% endblock %}
-
+<!DOCTYPE html>
+{% extends "base.html" %}
 {% block div_content %}
+
 <style>
     h1,
     input::-webkit-input-placeholder,
@@ -16,7 +15,7 @@
         width: 100%;
         font-size: 18px;
         background: darken(color, 4%);
-        color: white;
+        color: rgb(1, 1, 1);
         line-height: 150%;
         border-radius: 3px 3px 0 0;
         box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
@@ -53,38 +52,20 @@
         border-radius: 3px;
         padding: 6px;
         width: 200px;
-        color: white;
+        color: rgb(43, 41, 41);
         margin-left: 25px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
 
     }
     
 </style>
-{% if user.is_authenticated %}
-<body>
-    <center>
-        <h2>Por favor ingrese los datos del evento solicitados</h2>
-    </center>
-    <form method="post">
-        {% csrf_token %}
-        {{ formito.as_p }}
-        <button type="submit" value="submit" class="btn btn-primary">Ingresar</button>
-    </form>
-</body>
 
-</html>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
-{% endif %}
+
+<center>
+<h1>Seleccione que desea hacer</h1>
+
+<button onclick="location.href = '/register'">Registrarse</button>
+
+<button onclick="location.href = 'http://127.0.0.1:8000/accounts/login/'">Logearse</button>
+</center>
 {% endblock %}
-
-
-
-
-
-
-
-
-
-

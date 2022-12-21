@@ -7,6 +7,9 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
+def home(request):
+        return render(request, "home.html", {})
+
 
 def productor(request):
     productor = Productor.objects.all()
@@ -43,3 +46,7 @@ def inicio(request):
         formito = NuevoStreaming()
 
     return render(request, "main.html", {"formito": formito, "eventos": eventos})
+
+
+
+

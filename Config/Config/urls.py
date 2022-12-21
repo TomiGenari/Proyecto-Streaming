@@ -17,10 +17,19 @@ from django.contrib import admin
 from appStreaming import views
 from django.urls import path
 from django.conf.urls import include
-
+from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('register/', views.productor, name='register'),
     path('admin/', admin.site.urls),
-    path('', include('appStreaming.urls'))
+    path('', include('appStreaming.urls')),
+    path("accounts/", include("django.contrib.auth.urls")), 
+    path("", TemplateView.as_view(template_name="main.html"), name="main"),
+    path('home/', views.home, name='Inicio'),
+    path('main/', views.inicio, name='registro de eventos'),
+
+
+
+
+
 ]

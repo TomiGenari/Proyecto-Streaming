@@ -1,8 +1,19 @@
-{% extends 'base.html' %}
-
-{% block title %}Home{% endblock %}
-
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
 {% block div_content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrador</title>
+</head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+
 <style>
     h1,
     input::-webkit-input-placeholder,
@@ -60,7 +71,9 @@
     }
     
 </style>
-{% if user.is_authenticated %}
+
+
+
 <body>
     <center>
         <h2>Por favor ingrese los datos del evento solicitados</h2>
@@ -73,18 +86,4 @@
 </body>
 
 </html>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
-{% endif %}
-{% endblock %}
-
-
-
-
-
-
-
-
-
-
+{% endblock div_content %}
