@@ -63,21 +63,11 @@ class Evento(models.Model):
     fechaRegistro = models.DateTimeField()
     link = models.CharField(max_length=30)
     urlImg = models.CharField(max_length=30)
-   
-   
     idProductor = models.ForeignKey('Productor', on_delete=models.CASCADE)
-    def __str__(self):
-        return self.idProductor
     idTipoEvento = models.ForeignKey('TipoEvento', on_delete=models.CASCADE)
-    def __str__(self):
-        return self.idTipoEvento
     idPlataforma = models.ForeignKey('PlataformaStream', on_delete=models.CASCADE)
-    def __str__(self):
-        return self.idPlataforma
     idEstado = models.ForeignKey('Estado', on_delete=models.CASCADE)
-    def __str__(self):
-        return self.idEstado
     idPais = models.ForeignKey('PaisDestino', on_delete=models.CASCADE)
     def __str__(self):
-        return self.idPais
+        return self.nombre
 
