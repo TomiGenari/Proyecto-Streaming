@@ -59,7 +59,7 @@ class Evento(models.Model):
     artistasParticipantes = models.TextField()
     inicioStream = models.DateTimeField()
     finStream = models.DateTimeField()
-    fechaConfirmacion = models.DateTimeField()
+    fechaConfirmacion = models.DateTimeField(blank=True, null=True)
     fechaRegistro = models.DateTimeField()
     link = models.CharField(max_length=30)
     urlImg = models.CharField(max_length=30)
