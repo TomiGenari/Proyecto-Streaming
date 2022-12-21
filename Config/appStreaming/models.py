@@ -58,7 +58,7 @@ class Evento(models.Model):
     cantidadEntradas = models.IntegerField()
     artistasParticipantes = models.TextField()
     inicioStream = models.DateTimeField()
-    finStream = models.DateField()
+    finStream = models.DateTimeField()
     fechaConfirmacion = models.DateTimeField()
     fechaRegistro = models.DateTimeField()
     link = models.CharField(max_length=30)
