@@ -7,8 +7,10 @@ class NuevoStreaming(forms.ModelForm):
     class Meta:
         model = Evento 
         fields = '__all__'
-    categorias = forms.ModelMultipleChoiceField(queryset=CategoriaEvento.objects.all())
-        
+    categorias = forms.ModelMultipleChoiceField(
+        queryset=CategoriaEvento.objects.all(),
+        widget=forms.CheckboxSelectMultiple
+    )
 
 class NuevoProductor(forms.ModelForm):
     class Meta:
