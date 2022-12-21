@@ -1,26 +1,13 @@
 from django import forms
-from .models import Evento
+from .models import Evento, CategoriaEvento, Productor
 from django.contrib.auth.forms import UserCreationForm
-from .models import Productor
-
-
-class DateTimeInput(forms.DateTimeInput):
-	input_type = 'date'
-
 
 
 class NuevoStreaming(forms.ModelForm):
     class Meta:
         model = Evento 
         fields = '__all__'
-        
-        widgets = {
-            'inicioStream' : DateTimeInput(),
-            'finStream' : DateTimeInput(),
-            'fechaConfirmacion' : DateTimeInput(),
-            'fechaRegistro' : DateTimeInput(),
-        }
-        
+    categorias = forms.ModelMultipleChoiceField(queryset=CategoriaEvento.objects.all())
         
 
 class NuevoProductor(forms.ModelForm):

@@ -70,4 +70,5 @@ class Evento(models.Model):
     idPais = models.ForeignKey('PaisDestino', on_delete=models.CASCADE)
     def __str__(self):
         return self.nombre
+    categorias = models.ManyToManyField(CategoriaEvento)
 
