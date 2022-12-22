@@ -29,6 +29,8 @@ urlpatterns = [
     path('main/', views.inicio, name='registro de eventos'),
     path('chose/', views.chose, name='elegir'),
     path("", TemplateView.as_view(template_name="chose.html"), name="chose"),
+    path('eventosregistrados/', views.eventosregistrados, name='eventosregistrados'),
+
 
 
 

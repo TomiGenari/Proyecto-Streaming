@@ -15,6 +15,11 @@ def chose(request):
 
         return render(request, "chose.html", {})
 
+def eventosregistrados(request):
+        eventos = Evento.objects.all()
+
+        return render(request, "eventosregistrados.html", {})
+
 
 def productor(request):
     productor = Productor.objects.all()
