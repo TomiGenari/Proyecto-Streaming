@@ -10,6 +10,11 @@ from django.contrib.auth.forms import UserCreationForm
 def home(request):
         return render(request, "home.html", {})
 
+def chose(request):
+        eventos = Evento.objects.all()
+
+        return render(request, "chose.html", {})
+
 
 def productor(request):
     productor = Productor.objects.all()
