@@ -7,18 +7,21 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
+
 def home(request):
-        return render(request, "home.html", {})
+    return render(request, "home.html", {})
+
 
 def chose(request):
-        eventos = Evento.objects.all()
+    eventos = Evento.objects.all()
 
-        return render(request, "chose.html", {})
+    return render(request, "chose.html", {})
+
 
 def eventosregistrados(request):
-        eventos = Evento.objects.all()
+    eventos = Evento.objects.all()
 
-        return render(request, "eventosregistrados.html", {})
+    return render(request, "eventosregistrados.html", {})
 
 
 def productor(request):
@@ -58,5 +61,6 @@ def inicio(request):
     return render(request, "main.html", {"formito": formito, "eventos": eventos})
 
 
-
-
+def eventosregistrados(request):
+    eventos = Evento.objects.all()
+    return render(request, 'eventosregistrados.html', {'eventos': eventos})

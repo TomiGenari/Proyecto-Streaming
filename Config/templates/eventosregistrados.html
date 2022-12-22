@@ -1,1 +1,71 @@
-<h1>aca irian lo que vienen siendo los eventos</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .evento {
+        border: 10px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .datos {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .categorias {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .categoria {
+        background-color: #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+        padding: 5px 10px;
+    }
+</style>
+
+
+<body>
+    {% for evento in eventos %}
+    <div class="evento">
+        <h2 class="titulo">{{ evento.nombre }}</h2>
+        <p class="datos">Descripción: {{ evento.descripcion }}</p>
+        <p class="datos">Cantidad de entradas: {{ evento.cantidadEntradas }}</p>
+        <p class="datos">Artistas participantes: {{ evento.artistasParticipantes }}</p>
+        <p class="datos">Inicio del streaming: {{ evento.inicioStream }}</p>
+        <p class="datos">Fin del streaming: {{ evento.finStream }}</p>
+        <p class="datos">Fecha de registro: {{ evento.fechaRegistro }}</p>
+        <p class="datos">Link: {{ evento.link }}</p>
+        <p class="datos">URL de la imagen: {{ evento.urlImg }}</p>
+        <p class="datos">Productor: {{ evento.idProductor.nombre }}</p>
+        <p class="datos">Tipo de evento: {{ evento.idTipoEvento.nombre }}</p>
+        <p class="datos">Plataforma: {{ evento.idPlataforma.nombre }}</p>
+        <p class="datos">Estado: {{ evento.idEstado.nombre }}</p>
+        <p class="datos">País de destino: {{ evento.idPais.nombre }}</p>
+
+        <div class="categorias">
+            {% for categoria in evento.categorias.all %}
+            <div class="categoria">{{ categoria.nombre }}</div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</body>
+
+</html>
